@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>间接腹地省份进出口总值折线图</title>
+  <script src="https://fastly.jsdelivr.net/npm/echarts@5"></script>
+</head>
+<body style="margin:0">
+  <div id="main" style="width: 100vw; height: 100vh;"></div>
+  <script>
+    var chart = echarts.init(document.getElementById('main'));
+    var option = {
+      title: {
+        text: '间接腹地省份进出口总值（2012–2022）'
+      },
+      tooltip: {
+        trigger: 'axis'
+      },
+      legend: {
+        type: 'scroll',
+        orient: 'vertical',
+        right: 10,
+        top: 20,
+        bottom: 20
+      },
+      grid: {
+        left: '3%',
+        right: '20%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+      },
+      yAxis: {
+        type: 'value',
+        name: '万美元'
+      },
+      series: [{'name': '云南', 'type': 'line', 'data': [2100500, 2582900, 2962200, 2452700, 1999900, 2339400, 2989500, 3369200.0, 3894600.0, 4865900.0, 5004200.0]}, {'name': '贵州', 'type': 'line', 'data': [663156, 829009, 1077133, 1222142, 569962, 816231, 760286, 656816.88, 791068.85, 1004988.71, 1013929.21]}, {'name': '湖南', 'type': 'line', 'data': [2194082, 2516439, 3102729, 2936680, 2687970, 3603951, 4652983, 6288194.0, 7067840.0, 9271485.8363, 10543352.9235]}]
+    };
+    chart.setOption(option);
+  </script>
+</body>
+</html>
