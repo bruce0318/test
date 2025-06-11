@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>间接腹地省份GDP（2012–2022）</title>
+  <script src="https://fastly.jsdelivr.net/npm/echarts@5"></script>
+</head>
+<body style="margin:0">
+  <div id="main" style="width: 100vw; height: 100vh;"></div>
+  <script>
+    var chart = echarts.init(document.getElementById('main'));
+    var option = {
+      title: {
+        text: '间接腹地省份GDP（2012–2022）'
+      },
+      tooltip: {
+        trigger: 'axis'
+      },
+      legend: {
+        left: 'right'
+      },
+      grid: {
+        left: '3%',
+        right: '10%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+      },
+      yAxis: {
+        type: 'value',
+        name: 'GDP（亿元）',
+        min: 'dataMin'
+      },
+      series: [{"name": "云南", "type": "line", "data": [11097.39, 12825.46, 14041.65, 14960.0, 16369.0, 18486.0, 20880.63, 23223.75, 24555.72, 27161.62, 28556.14]}, {"name": "贵州", "type": "line", "data": [6742.24, 7973.06, 9173.13, 10541.0, 11792.35, 13605.42, 15353.21, 16769.34, 17860.41, 19458.6, 20010.37]}, {"name": "湖南", "type": "line", "data": [21207.23, 23545.24, 25881.28, 28538.6, 30853.45, 33828.11, 36329.68, 39930.75, 41693.71, 45751.85, 47957.88]}]
+    };
+    chart.setOption(option);
+  </script>
+</body>
+</html>
