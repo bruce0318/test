@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2030–2050年平陆运河通航后煤炭运输量结构</title>
+  <script src="https://fastly.jsdelivr.net/npm/echarts@5"></script>
+</head>
+<body style="margin:0">
+  <div id="main" style="width: 100vw; height: 100vh;"></div>
+  <script>
+    var chart = echarts.init(document.getElementById('main'));
+    var option = {
+      title: {
+        text: '2030–2050年平陆运河通航后煤炭运输量结构',
+        left: 'center'
+      },
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: { type: 'shadow' }
+      },
+      legend: {
+        data: ['直接腹地', '间接腹地'],
+        top: 30
+      },
+      grid: {
+        left: '5%',
+        right: '5%',
+        bottom: '5%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'category',
+        data: ['2030', '2040', '2050']
+      },
+      yAxis: {
+        type: 'value',
+        name: '万吨'
+      },
+      series: [
+        {
+          name: '直接腹地',
+          type: 'bar',
+          stack: 'total',
+          emphasis: { focus: 'series' },
+          data: [710, 625, 500]
+        },
+        {
+          name: '间接腹地',
+          type: 'bar',
+          stack: 'total',
+          emphasis: { focus: 'series' },
+          data: [200, 170, 150]
+        }
+      ]
+    };
+    chart.setOption(option);
+  </script>
+</body>
+</html>
